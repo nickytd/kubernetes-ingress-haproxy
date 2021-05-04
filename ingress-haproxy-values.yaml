@@ -215,7 +215,7 @@ controller:
   ## Pod DNS Policy
   ## Change this to ClusterFirstWithHostNet in case you have useHostNetwork set to true
   ## ref: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy
-  dnsPolicy: ClusterFirstWithHostNet
+  dnsPolicy: ClusterFirst
 
   ## Additional command line arguments to pass to Controller
   ## ref: https://github.com/haproxytech/kubernetes-ingress/blob/master/documentation/controller.md
@@ -344,7 +344,7 @@ controller:
   ## Controller DaemonSet configuration
   ## ref: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
   daemonset:
-    useHostNetwork: true  # also modify dnsPolicy accordingly
+    useHostNetwork: false  # also modify dnsPolicy accordingly
     useHostPort: true
     hostPorts:
       http: 80
