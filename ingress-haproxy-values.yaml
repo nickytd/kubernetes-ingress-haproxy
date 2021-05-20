@@ -409,7 +409,7 @@ controller:
   ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/getting-started.md
   serviceMonitor:
     ## Toggle the ServiceMonitor, true if you have Prometheus Operator installed and configured
-    enabled: true
+    enabled: false
 
     ## Specify the labels to add to the ServiceMonitors to be selected for target discovery
     extraLabels: {}
